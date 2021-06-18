@@ -1,0 +1,58 @@
+
+.stack {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #000000;
+    width: fit-content;
+    z-index: 0;
+}
+
+.stack-space {
+    border: 1px solid #d3d3d3;
+    height: 50px;
+    width: 150px;
+    z-index: 1;
+}
+
+.draggable {
+    --position: absolute;
+    height: 50px;
+    width: 150px;
+    border: none;
+    z-index: -1;
+}
+
+.blue {
+    background-color: #4ad5ff;
+}
+
+.red {
+    background-color: #be250d;
+}
+
+.yellow {
+    background-color: #ece643;
+}
+
+.green {
+    background-color: #3bbf3f;
+}
+
+.pink {
+    background-color: #be7fd9;
+}
+
+.purple {
+    background-color: #480962;
+}
+
+.choice {
+    outline: dashed #731717 2px;
+    outline-offset: -2px;
+    z-index: 3;
+}
+
+.fake {
+    background: none;
+}

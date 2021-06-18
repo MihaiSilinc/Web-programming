@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="details">
+    <h1>Books</h1>
+
+    <input type="text" placeholder="Author:" #author (input)="refresh(author.value, title.value, comment.title)"/>
+
+    <input type="text" placeholder="Title:" #title (input)="refresh(author.value, title.value, comment.title)"/>
+
+    <input type="text" placeholder="Title:" #comment (input)="refresh(author.value, title.value, comment.title)"/>
+  </div>
+  <br>
+  <div>
+    <button id="addButton"  (click)="navigateToAdd()">
+      Add new book
+    </button>
+    <p id="info">The filter has been done with the author {{author.value}} and the title {{title.value}}</p>
+  </div>
+  <table>
+    <tr>
+      <th> Author</th>
+      <th> Title</th>
+      <th> Comment</th>
+      <th> Posted on:</th>
+      <th> Option:</th>
+    </tr>
+    <tr *ngFor="let book of books">
+      <td>{{book.author}}</td>
+      <td>{{book.title}}</td>
+      <td>{{book.comment}}</td>
+      <td>{{book.posted_on}}</td>
+
+      <td>
+        <button id="updateButton" (click)="navigateToUpdate(book.id)">Update</button>
+        <br>
+        <button (click)="navigateToDelete(book.id)" id="deleteButton">Delete</button>
+        <br>
+      </td>
+    </tr>
+  </table>
+</div>
